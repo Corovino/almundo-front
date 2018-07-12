@@ -1,1 +1,428 @@
-/* You can add global styles to this file, and also import other style files */
+
+html{font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}
+body{
+    margin: 0;
+    background-color: #f3f4f3;
+}
+.header { 
+    background-color: #1b4887;
+    height: 95px;
+}
+.log { 
+  padding: 1%;
+}
+
+.col-35{ 
+    position: relative;
+    width: 35%;
+    display: block;
+    float: left;
+  }
+
+  .col-55{ 
+    position: relative;
+    width: 55%;
+    display: block;
+    float: left;
+  }
+
+.filter-block{ 
+    width: 100%;
+    margin: 1px;
+    min-height: 40px;
+    background-color: white;
+
+  }
+
+  .hotel-detail {
+    width: 100%;
+    margin: 1px;
+    margin-bottom: 2%;
+    min-height: 207px;
+    background-color: white;
+}
+
+  .principal-div {
+    display: block;
+    position: relative;
+    height: auto;
+    width: 95%;
+    margin: 13px auto;
+}
+
+  .margin8{ 
+    margin:8px;
+  
+  }
+.margin0{ 
+    margin:0px;
+  
+  }
+
+  .padding9{ 
+    padding:9px;
+  
+  }
+
+
+  h2{
+    color: #3c3c3c;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+  h3{ 
+    color: #4081b9;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+  
+  }
+
+
+  .aling-item{
+    width: 90%;
+    float: right;
+}
+
+  .padding14{ 
+    padding: 14px;
+  
+  }
+
+  summary::-webkit-details-marker {
+    color: #3f81bb;
+    margin:11px 0 11px 11px;
+    position:relative;
+    width:10px;
+}
+
+
+.div-stars{
+    min-height: 220px;
+    padding: 10px;
+}
+
+
+.design-buttom{
+    width: 90%;
+    float: right;
+}
+
+  .margin-top-15{ 
+    margin-top: 15px;
+  
+  }
+
+  .shadow{ 
+  -webkit-box-shadow: 0px 2px 5px 0px rgb(230, 230, 230);
+-moz-box-shadow: 0px 2px 5px 0px rgb(230, 230, 230);
+box-shadow: 0px 2px 5px 0px rgb(230, 230, 230);
+}
+
+.icon-size {
+    width: 13px;
+    margin-right: 7px;
+}
+.search-box{
+    min-height: 60px
+}
+
+.form-hotel {
+    height: 28px;
+    width: 51%;
+    margin: 11px;
+    font-size: 15px;
+    padding-left: 13px;
+    color: grey;
+}
+
+.button-hotel{
+    height: 36px;
+    width: 29%;
+    margin: 0px;
+    font-size: 15px;
+    padding-left: 13px;
+    background-color: #002a79;
+    color: white;
+}
+.check-box-star{
+    float: left;
+    margin: 3px 11px;
+}
+.hotel-image {
+
+    float: left;
+    width: 100%;
+    max-height: 170px;
+    object-fit: cover;
+}
+
+.hotel-name {
+    width: 100%;
+    float: left;
+    padding-left: 1px;
+    font-weight: 500;
+}
+
+.star-detail{
+    width: 17px;
+    margin-right: 0;
+}
+.icon-amenities {
+    width: 23px;
+    height: 23px;
+    margin-right: 5px;
+    margin-top: 8px;
+}
+
+.detail-hotel {
+    width: 38%;
+    height: 100%;
+    position: relative;
+    display: block;
+    float: left;
+    min-height: 188px;
+    margin: 1%;
+    border-right: dotted 2px #dadada;
+}
+.image-box {
+    width: 30%;
+    position: relative;
+    display: block;
+    float: left;
+    padding: 8px;
+}
+
+.prom{
+    float: left;
+    width: 26%;
+}
+
+.button-prom {
+    height: 41px;
+    width: 71%;
+    margin: 0px auto;
+    font-size: 15px;
+    display: block;
+    padding-left: 13px;
+    background-color: #002a79;
+    color: white;
+}
+
+.prom-grey{
+    text-align: center;
+    font-size: 14px;
+    width: 80%;
+    color: #9c9c9c;
+    margin: 15% auto 3%;
+}
+
+.prom-orange{
+    font-size: 25px;
+    margin: 12px;
+    text-align: center;
+    color: #e16831;
+}
+
+
+.span-orange{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+/* Para 960px */  
+@media only screen and (max-width: 1173px){  
+    .principal-div {
+        display: block;
+        position: relative;
+        height: auto;
+        width: 104%;
+        margin: 13px auto;
+    }
+}  
+
+@media only screen and (max-width: 1000px){  
+    .aling-item {
+        width: 88%;
+        float: right;
+    }
+    .prom-orange {
+        font-size: 25px;
+        margin: 4px;
+        text-align: center;
+        color: #e16831;
+    }
+    .prom-grey {
+        text-align: center;
+        font-size: 14px;
+        width: 80%;
+        color: #9c9c9c;
+        margin: 9% auto 0%;
+    }
+} 
+
+
+@media only screen and (max-width: 895px)  {  
+    .aling-item {
+        width: 85%;
+        float: right;
+    }
+    .button-prom {
+        height: 41px;
+        width: 60%;
+        margin: 0px auto;
+        font-size: 15px;
+        display: block;
+        padding-left: 13px;
+        background-color: #002a79;
+        color: white;
+    }
+  
+} 
+/* Para 960px */  
+@media only screen and (max-width: 821px) {  
+    .prom-orange {
+        font-size: 19px;
+        margin: 4px;
+        text-align: center;
+        color: #e16831;
+    }
+    .span-orange {
+        font-size: 30px;
+        font-weight: 600;
+    }
+}  
+  
+
+
+@media only screen and (max-width: 785px) {  
+  .col-md-93{ 
+      width: 93%;
+  }
+  .col-md-49{ 
+    width: 49%;
+}
+.float-left-md{ 
+    float: left;
+}
+
+.margin-r-md{
+    margin-right: 0px;
+    margin-left: 2px;
+}
+
+.margin-l-md{
+    margin-right: 2px;
+    margin-left: 10px;
+}
+
+
+}  
+
+@media only screen and (max-width: 723px) {  
+    .margin-0-723{ 
+        margin-left: 0!important;
+        margin-right: 0!important;
+    }
+    .col-100-723{ 
+        width: 100%;
+    }
+  }  
+
+  @media only screen and (max-width: 520px) {  
+    
+    .col-96-520{ 
+        width: 96%;
+    }
+
+    .hotel-detail {
+        width: 100%;
+        margin: 1px;
+        margin-bottom: 2%;
+        min-height: 784px;
+        height: auto;
+        background-color: white;
+    }
+    h3 {
+        color: #4081b9;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 22px;
+        font-weight: 400;
+    }
+    .star-detail {
+        width: 24px;
+        margin-right: 0;
+    }
+    .icon-amenities {
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+        margin-top: 8px;
+    }
+    .detail-hotel {
+        width: 95%;
+        height: 100%;
+        position: relative;
+        display: block;
+        float: left;
+        min-height: 142px;
+        margin: 3%;
+        border-bottom: dotted 2px #dadada;
+        border-right: none;
+    }
+    .prom-grey {
+        text-align: center;
+        font-size: 17px;
+        width: 87%;
+        color: #9c9c9c;
+        margin: 6% auto 0%;
+    }
+    .prom-orange {
+        font-size: 25px;
+        margin: 4px;
+        text-align: center;
+        color: #e16831;
+    }
+    .span-orange {
+        font-size: 38px;
+        font-weight: 600;
+    }
+  }  
+
+  @media only screen and (max-width: 400px) {  
+    .hotel-detail {
+        width: 99%;
+        margin: 1px;
+        margin-bottom: 2%;
+        min-height: 670px;
+        background-color: white;
+    }
+  }  
+  @media only screen and (max-width: 300px) {  
+    .hotel-detail {
+        width: 97%;
+        margin: 1px;
+        margin-bottom: 2%;
+        min-height: 579px;
+        background-color: white;
+    }
+  } 
+  @media only screen and (max-width: 200px) {  
+    .hotel-detail {
+        width: 94%;
+        margin: 1px;
+        margin-bottom: 2%;
+        min-height: 482px;
+        background-color: white;
+    }
+  } 
+
+  .star{
+      max-width: 5%;
+  }
+  label{
+      display:block;
+  }  
+  

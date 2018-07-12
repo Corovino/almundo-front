@@ -1,27 +1,38 @@
-# AlmundoFront
+# Almundo test
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Acontinuacion explico detalles sobre la prueba para la vancante frontend developer Almundo.
+Para esta prueba  hice uso de Angular 6 para el front y nodejs/express para el API.
+ 
+El repositorio se divide en dos carpetas
+  - V1 - api node
+  - mongodb para la DB
+  - almundo-front - Angular 6
 
-## Code scaffolding
+# API Node
+  Etructura del proyecto:
+      - config: carpeta de configuracion de conexiona la  DB
+      - controllers : carpeta que contiene todos los controllers desarrollados apra el API
+      - models : carpeta que contiene los modelos e datos usados  en el API
+      - routes : carpeta que contiene las rutas del API
+      - app.js
+      - server.js 
+      - package.json
+      
+ Al momento de descargar el repositorio es necesario digitar en terminal el comando  npm i o install  para instalar todas las dependencias necesarias para el correcto funcionamiento.
+Para iniciar el proyecto se debe lanzar el comando npm start para correr el servidor y poder probar el funcionamiento del API. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Front Angular
+El front  esta desarrollado en la version 6 del framework, los archivos trabajados son:
+  - services: contiene  la logica de las peticiones HTTP
+  
 
-## Build
+Al momento  de descargar el repositorio es necesario: 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+> Instala angular cli: npm install -g @angular/cli 
+> npm install para asegurarse que estan las dependencias instaladas.
+> ng serve para levantar el servidor en el puerto 4200.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

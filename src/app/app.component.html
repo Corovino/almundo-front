@@ -1,20 +1,107 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+
+
+<div class="header">
+  <div class="log">
+    <img src="assets/images/logo-almundo.svg" alt="logo">
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+
+<div class="row principal-div">
+  <div class="col-35 margin8 col-md-93 ">
+    <div class="filter-box margin-0-723 filter-block margin8 shadow">
+      <h2 class="padding9 margin0">Filtros</h2>
+    </div>
+
+    <div class="hotel-name-box filter-block margin8 shadow col-md-49 float-left-md margin-l-md col-100-723 margin-0-723">
+      <details>
+        <summary>
+          <h3 class="padding9 margin0 aling-item"><img src="assets/icons/filters/search.svg" alt="logo" class="icon-size">Nombre del hotel</h3>
+        </summary>
+        <form [formGroup]="hotelForm" (submit)="searchHotel()">
+          <div class="search-box">
+            <input type="text" name="firstname" class="form-hotel" value="Ingrese el nombre del hotel" formControlName="name">
+            <button  class="button-hotel" type="submit" [disabled]="!hotelForm.valid">Aceptar</button>
+          </div>
+        </form>
+      </details>
+    </div>
+
+    <div class="Stars-box filter-block margin8 shadow col-md-49 col-100-723 float-left-md margin-r-md margin-0-723">
+      <details>
+        <summary>
+          <h3 class="padding9 margin0 aling-item"><img src="assets/icons/filters/star.svg" alt="logo" class="icon-size">Estrellas</h3>
+        </summary>
+        <div class="div-stars">
+          
+          <div>
+            <label for="">
+              <input type="checkbox" (click)="getStar(0)">
+              Todas las estrellas
+            </label>
+            <label for="">
+              <input type="checkbox" (click)="getStar(5)">
+              <img class="star" src="assets/icons/filters/star.svg" alt="">
+              <img class="star" src="assets/icons/filters/star.svg" alt="">
+              <img class="star" src="assets/icons/filters/star.svg" alt="">
+              <img class="star" src="assets/icons/filters/star.svg" alt="">
+              <img class="star" src="assets/icons/filters/star.svg" alt="">
+            </label>
+            <label for="">
+              <input type="checkbox" (click)="getStar(4)">
+              <img class="star" src="assets/icons/filters/star.svg" alt="">
+              <img class="star" src="assets/icons/filters/star.svg" alt="">
+              <img class="star" src="assets/icons/filters/star.svg" alt="">
+              <img class="star" src="assets/icons/filters/star.svg" alt="">
+            </label>
+            <label for="">
+              <input type="checkbox" (click)="getStar(3)">
+              <img class="star" src="assets/icons/filters/star.svg" alt="">
+              <img class="star" src="assets/icons/filters/star.svg" alt="">
+              <img class="star" src="assets/icons/filters/star.svg" alt="">
+              
+            </label>
+            <label for="">
+              <input type="checkbox" (click)="getStar(2)">
+              <img class="star" src="assets/icons/filters/star.svg" alt="">
+              <img class="star" src="assets/icons/filters/star.svg" alt="">
+            </label>
+            <label for="">
+              <input type="checkbox" (click)="getStar(1)">
+              <img class="star" src="assets/icons/filters/star.svg" alt="">
+            </label>
+          </div>
+          
+        </div>
+      </details>
+    </div>
+  </div>
+  <div class="col-55 margin8 margin-top-15 col-md-93">
+
+    <div class="hotel-detail shadow" *ngFor="let item of hotels">
+
+      <div class="image-box col-96-520">
+        <img src="assets/hotels/{{item.image}}" alt="image-hotel" class="hotel-image">
+      </div>
+
+      <div class="detail-hotel col-96-520">
+        <h3 class="padding9 margin0 hotel-name">{{item.name}}</h3>
+        <img *ngFor="let start of arrayOne(item.stars);" src="assets/icons/filters/star.svg" alt="logo" class="star-detail">
+        <div>
+          <img *ngFor="let amenities of item.amenities; let i = index;" src="assets/icons/amenities/{{amenities}}.svg" alt="logo" class="icon-amenities">
+        </div>
+      </div>
+
+      <div class="prom col-96-520">
+        <p class="prom-grey">Precio por noche por habitación</p>
+        <p class="prom-orange">ARS<span class="span-orange"> 863</span></p>
+        <div class="search-box">
+
+          <button type="button" class="button-prom">Ver hotel</button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
 
